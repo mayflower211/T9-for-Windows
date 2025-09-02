@@ -1,0 +1,14 @@
+// resources.rc
+#include <windows.h>      // <-- ВОТ ОНО! Главный заголовок, который все определяет
+#include "src/resource.h" // Наш заголовок с ID
+
+IDD_ADDWORD_DIALOG DIALOGEX 0, 0, 200, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Добавить новое слово"
+FONT 8, "MS Shell Dlg 2"
+BEGIN
+    LTEXT           "Введите слово для последовательности:", -1, 10, 10, 180, 20
+    EDITTEXT        IDC_WORD_EDIT, 10, 35, 180, 14, ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK", IDOK, 85, 65, 50, 14
+    PUSHBUTTON      "Отмена", IDCANCEL, 140, 65, 50, 14
+END

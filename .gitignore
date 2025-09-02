@@ -1,0 +1,5 @@
+# Папка сборки CMake
+/build/
+
+# Файлы VS Code
+.vscode/
